@@ -1,3 +1,5 @@
+filetype off
+filetype plugin indent off
 
 " encoding settings
 set encoding=utf-8
@@ -12,17 +14,13 @@ else
 endif
 
 " edit settings
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
-set list
-set listchars=eol:\|,tab:>\ 
 set backspace=indent,eol,start
 set ambiwidth=double
 set hlsearch
 set showmatch
-noremap [3~ 
-noremap! [3~ 
 
 " vi settings
 syntax on
@@ -39,5 +37,4 @@ autocmd FileType * setlocal formatoptions-=ro
 autocmd FileType * setlocal noautoindent
 autocmd FileType * setlocal nosmartindent
 autocmd FileType * setlocal nocindent
-
 
