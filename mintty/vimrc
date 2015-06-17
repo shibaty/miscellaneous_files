@@ -21,6 +21,7 @@ set backspace=indent,eol,start
 set ambiwidth=double
 set hlsearch
 set showmatch
+set paste
 
 " vi settings
 syntax on
@@ -37,4 +38,3 @@ autocmd FileType * setlocal formatoptions-=ro
 autocmd FileType * setlocal noautoindent
 autocmd FileType * setlocal nosmartindent
 autocmd FileType * setlocal nocindent
-
