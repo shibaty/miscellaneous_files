@@ -5,12 +5,14 @@ filetype plugin indent off
 set encoding=utf-8
 scriptencoding utf-8
 set fileencodings=utf-8,cp932,latin1
-set fileformat=dos
-set fileformats=dos,unix,mac
 if has('win32unix') || has('win32') || has('win64')
     set termencoding=cp932
+    set fileformat=dos
+    set fileformats=dos,unix,mac
 else
     set termencoding=utf-8
+    set fileformat=unix
+    set fileformats=unix,dos,mac
 endif
 
 " edit settings
