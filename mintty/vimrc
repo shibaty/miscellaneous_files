@@ -1,18 +1,32 @@
+set nocompatible
 filetype off
 filetype plugin indent off
+
+" Load NeoBundle
+if has('vim_starting')
+  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+
+  NeoBundle 'tomasr/molokai'
+
+  NeoBundleCheck
+call neobundle#end()
 
 " encoding settings
 set encoding=utf-8
 scriptencoding utf-8
 set fileencodings=utf-8,cp932,latin1
 if has('win32unix') || has('win32') || has('win64')
-    set termencoding=cp932
-    set fileformat=dos
-    set fileformats=dos,unix,mac
+  set termencoding=utf-8
+  set fileformat=dos
+  set fileformats=dos,unix,mac
 else
-    set termencoding=utf-8
-    set fileformat=unix
-    set fileformats=unix,dos,mac
+  set termencoding=utf-8
+  set fileformat=unix
+  set fileformats=unix,dos,mac
 endif
 
 " edit settings
@@ -27,7 +41,7 @@ set paste
 
 " vi settings
 syntax on
-colorscheme slate
+colorscheme molokai
 set shellslash
 set statusline=[%L]\ %t\ %y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%r%m%=%c:%l/%L
 set laststatus=2
@@ -40,3 +54,4 @@ autocmd FileType * setlocal formatoptions-=ro
 autocmd FileType * setlocal noautoindent
 autocmd FileType * setlocal nosmartindent
 autocmd FileType * setlocal nocindent
+
