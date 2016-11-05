@@ -1,5 +1,8 @@
 alias ls='ls --color=auto --show-control-chars'
 alias vi='vim'
+alias view='vim -R'
+alias ping='winpty /c/windows/system32/ping'
+alias vagrant='winpty vagrant'
 
 export PS1="[\u@\h \W]\\$ "
 export LANG=ja_JP.utf8
