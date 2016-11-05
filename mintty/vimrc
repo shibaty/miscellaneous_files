@@ -10,16 +10,14 @@ filetype plugin indent off
 
 " Load NeoBundle
 if has('vim_starting')
-  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
-
   NeoBundle 'tomasr/molokai'
-
-  NeoBundleCheck
 call neobundle#end()
+NeoBundleCheck
 
 " encoding settings
 set encoding=utf-8
